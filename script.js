@@ -1,7 +1,7 @@
-var addButton = document.getElementById ("add-button");
-addButton.addEventListener ("click", addToDoItem);
+var addButton = document.getElementById("add-button");
+addButton.addEventListener("click", addToDoItem);
 function addToDoItem() {
-    alert("Add button Clicked!");
+    alert("Add button clicked!");
 }
 
 var toDoEntryBox = document.getElementById("todo-entry-box");
@@ -30,7 +30,7 @@ function toggleToDoItemState() {
         this.classList.remove("completed");
     } else {
         this.classList.add("completed");
-        }
+    }
 }
 
 function clearCompletedToDoItems() {
@@ -56,37 +56,37 @@ alert(myArray[0]);
 
 var toDoInfo = {
     "task": "Thing I need to do",
-    "completed" : false
- };
+    "completed": false
+};
 
- function saveList() {
+function saveList() {
     var toDos = [];
 
-    for (var i =0; i< toDoList.children.length; i++){
+    for (var i = 0; i < toDoList.children.length; i++) {
         var toDo = toDoList.children.item(i);
-        
+
         var toDoInfo = {
             "task": toDo.innerText,
             "completed": toDo.classList.contains("completed")
         };
 
-        toDo.push(toDoInfo);
+        toDos.push(toDoInfo);
 
     }
 
     localStorage.setItem("toDos", JSON.stringify(toDos));
     console.log("masuk kesini ya")
- }
+}
 
- function loadList () {
-    if (localStorage.getItem("toDos") !=null) {
+function loadList() {
+    if (localStorage.getItem("toDos") != null) {
         var toDos = JSON.parse(localStorage.getItem("toDos"));
 
         for (var i = 0; i < toDos.length; i++) {
             var toDo = toDos[i];
-            newToDoItem(toDo.task, toDo.completed)
+            newToDoItem(toDo.task, toDo.completed);
         }
     }
+}
 
- }
- loadList();
+loadList();
