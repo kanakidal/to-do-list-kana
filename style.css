@@ -51,7 +51,7 @@ body {
     margin: 10px 2px;
     padding: 5px 20px;
     border-radius: 15px;
-    background-color: #0093D5;
+    background-color: #232D3F;
     border: none;
     color: #fff;
     text-align: center;
@@ -80,15 +80,15 @@ body {
 }
 
 .todo-wrapper #clear-button {
-    background-color: #49B749;
+    background-color: #008170;
 }
 
 .todo-wrapper #empty-button {
-    background-color: #9B1C20;
+    background-color: #005B41;
 }
 
 .todo-wrapper #save-button {
-    background-color: #49B749;
+    background-color: #008170;
 }
 
 @media only screen and (min-width: 1400px) {
